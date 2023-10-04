@@ -10,7 +10,7 @@ export default function Home() {
   const [showSpinner, setShowSpinner] = useState(false);
   const [roomId, setroomId] = useState("");
 
-  var socket: any;
+  let socket: any;
   socket = io("http://localhost:3001");
 
   const handleJoin = () => {
@@ -61,4 +61,4 @@ export default function Home() {
       </div>
     </div>
   );
-}
+} 
