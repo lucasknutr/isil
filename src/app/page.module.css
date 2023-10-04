@@ -18,6 +18,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background: white;
+  }
+  .main_button:hover{
+    background: black;
+    color: whitesmoke;
   }
   .loading_spinner {
     border: 4px solid rgba(0, 0, 0, 0.3);
@@ -26,6 +31,10 @@
     width: 20px;
     height: 20px;
     animation: spin 1s linear infinite;
+  }
+  .user-information {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 200px;
   }
   @keyframes spin {
     0% {

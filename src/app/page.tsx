@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { io } from "socket.io-client";
 import { useState } from "react";
 import ChatPage from "@/components/page";
+import ParticlesBg from "particles-bg";
 
 export default function Home() {
   const [showChat, setShowChat] = useState(false);
@@ -34,6 +35,7 @@ export default function Home() {
         className={styles.main_div}
         style={{ display: showChat ? "none" : "" }}
       >
+        <div className="user-information flex flex-col p-10 bg-[rgba(0,0,0,.5)] rounded-md gap-5">
         <input
           className={styles.main_input}
           type="text"
@@ -55,10 +57,13 @@ export default function Home() {
             <div className={styles.loading_spinner}></div>
           )}
         </button>
+
+        </div>
       </div>
       <div style={{ display: !showChat ? "none" : "" }}>
         <ChatPage socket={socket} roomId={roomId} username={userName} />
       </div>
+      <ParticlesBg type="circle" bg={true}/>
     </div>
   );
 } 

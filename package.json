@@ -12,6 +12,7 @@
   "dependencies": {
     "@types/socket.io": "^3.0.2",
     "next": "13.5.4",
+    "particles-bg": "^2.5.5",
     "react": "^18",
     "react-dom": "^18",
     "socket.io": "^4.7.2",
