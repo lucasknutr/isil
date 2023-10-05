@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './styles.css';
 
 const Login = ({ styles, showChat, showSpinner, setUserName, setroomId, handleJoin }:any) => {
   return (
@@ -7,7 +8,8 @@ const Login = ({ styles, showChat, showSpinner, setUserName, setroomId, handleJo
         className={styles.main_div}
         style={{ display: showChat ? "none" : "" }}
       >
-        <div className="user-information flex flex-col px-20 py-16 bg-[rgba(0,0,0,.5)] rounded-md gap-5">
+        <div className="user-information flex flex-col px-20 py-16 bg-[rgba(255,255,255,.5)]
+         rounded-md gap-5 shadow-2xl">
         <input
           className={styles.main_input}
           type="text"
