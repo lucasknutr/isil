@@ -10,13 +10,19 @@
     "node": "node server.js"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.12",
+    "@mui/material": "^5.14.12",
+    "@mui/styled-engine-sc": "^5.14.12",
     "@types/socket.io": "^3.0.2",
     "next": "13.5.4",
     "particles-bg": "^2.5.5",
     "react": "^18",
     "react-dom": "^18",
     "socket.io": "^4.7.2",
-    "socket.io-client": "^4.7.2"
+    "socket.io-client": "^4.7.2",
+    "styled-components": "^5.3.11"
   },
   "devDependencies": {
     "@types/node": "^20",

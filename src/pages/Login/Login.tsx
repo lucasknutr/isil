@@ -7,7 +7,7 @@ const Login = ({ styles, showChat, showSpinner, setUserName, setroomId, handleJo
         className={styles.main_div}
         style={{ display: showChat ? "none" : "" }}
       >
-        <div className="user-information flex flex-col p-10 bg-[rgba(0,0,0,.5)] rounded-md gap-5">
+        <div className="user-information flex flex-col px-20 py-16 bg-[rgba(0,0,0,.5)] rounded-md gap-5">
         <input
           className={styles.main_input}
           type="text"

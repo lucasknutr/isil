@@ -5,6 +5,7 @@ import { useState } from "react";
 import ChatPage from "@/pages/ChatPage";
 import ParticlesBg from "particles-bg";
 import Login from "@/pages/Login/Login";
+import NavBar from "@/components/NavBar";
 
 export default function Home() {
   const [showChat, setShowChat] = useState(false);
@@ -32,11 +33,19 @@ export default function Home() {
 
   return (
     <div>
-      <Login styles={styles} showChat={showChat} showSpinner={showSpinner} setUserName={setUserName} setroomId={setroomId} handleJoin={handleJoin}/>
+      <NavBar />
+      <Login styles={styles} showChat={showChat} 
+      showSpinner={showSpinner} setUserName={setUserName} 
+      setroomId={setroomId} handleJoin={handleJoin}/>
       <div style={{ display: !showChat ? "none" : "" }}>
         <ChatPage socket={socket} roomId={roomId} username={userName} />
       </div>
-      <ParticlesBg type="circle" bg={true}/>
+      <ParticlesBg type="circle" bg={{
+        position: "fixed",
+        zIndex: -1,
+        top: 0,
+        left: 0
+      }}/>
     </div>
   );
 } 

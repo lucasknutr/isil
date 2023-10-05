@@ -11,10 +11,12 @@
     height: 2rem;
     width: 15rem;
     padding: 5px;
+    border-radius: 0.5rem;
   }
   .main_button {
     height: 2rem;
     width: 15rem;
+    border-radius: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
