@@ -7,18 +7,24 @@
     flex-direction: column;
   }
   .chat_border {
-    border: 1px solid palevioletred;
     padding: 3rem;
-    background: rgba(0, 0, 0,.5);
+    background: rgba(255, 255, 255,.5);
     border-radius: 1rem;
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   }
   .chat_input {
     height: 2rem;
     width: 15rem;
-    padding: 5px;
+    padding: 5px; 
   }
   .chat_button {
     height: 2rem;
+    padding: 10px;
+    margin: 5rem;
+    border-radius: 25%;
+    background: rgba(255, 255, 255,.2);
   }
   .chatProfileRight {
     display: flex;
