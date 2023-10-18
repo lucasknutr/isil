@@ -1,6 +1,7 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import style from "./index.module.css";
+import SendIcon from '@mui/icons-material/Send';
 
 interface IMsgDataTypes {
   roomId: String | number;
@@ -42,11 +43,12 @@ const ChatPage = ({ socket, username, roomId }: any) => {
     <div className={style.chat_div}>
       <div className={style.chat_border}>
         <div style={{ marginBottom: "1rem" }}>
-          <p>
-            Name: <b>{username}</b> and Room Id: <b>{roomId}</b>
+          <p className="">
+            Name: <b>{username}</b> <br/> Room Id: <b>{roomId}</b>
           </p>
+          <div className="h-[1px] my-5 w-[100%] bg-black"></div>
         </div>
-        <div>
+        <div className=" overflow-scroll">
           {chat.map(({ roomId, user, msg, time }, key) => (
             <div
               key={key}
@@ -62,22 +64,24 @@ const ChatPage = ({ socket, username, roomId }: any) => {
               >
                 {user.charAt(0)}
               </span>
-              <h3 style={{ textAlign: user == username ? "right" : "left" }}>
+              <h3 style={{ textAlign: user == username ? "right" : "left" }} 
+              className="rounded-lg py-2 px-3 max-w-[50%]
+              flex justify-center items-center shadow-xl bg-slate-200">
                 {msg}
               </h3>
             </div>
           ))}
         </div>
         <div>
-          <form onSubmit={(e) => sendData(e)} className="flex justify-center gap-5 mt-14">
+          <form onSubmit={(e) => sendData(e)} className="flex justify-center gap-5 mt-1 ">
             <input
-              className="w-[60%] py-2 px-5 rounded-lg bg-slate-400"
+              className="w-[60%] py-2 px-5 rounded-lg bg-slate-200 border-2 border-black"
               type="text"
               value={currentMsg}
               placeholder="Type your message.."
               onChange={(e) => setCurrentMsg(e.target.value)}
             />
-            <button className="px-5 py-2 bg-pink-500 rounded-lg my-2">Send</button>
+            <button className="px-5 py-2 bg-pink-300 rounded-lg my-2 border-2 border-black hover:bg-slate-300"><SendIcon/></button>
           </form>
         </div>
       </div>

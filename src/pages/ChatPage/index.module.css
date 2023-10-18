@@ -9,6 +9,12 @@
   .chat_border {
     padding: 3rem;
     background: rgba(255, 255, 255,.5);
+    max-width: 50%;
+    width: 50%;
+    max-height:60%;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
     border-radius: 1rem;
     --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
     --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
